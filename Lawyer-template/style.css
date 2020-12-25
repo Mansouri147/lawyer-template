@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@600;700;800&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;800&display=swap");
 
 * {
@@ -317,8 +317,38 @@ nav .nav__button span {
 
 .section2__top .row__container {
   background: #f8f1e6;
-  padding: 70px 40px;
+  padding: 40px 40px;
   margin: 20px;
+}
+
+/* on hover */
+.section2__top .row__container.hover {
+  background: #936829;
+  padding: 40px 40px;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: all .2s ease-in;
+}
+
+.section2__top .row__container:hover.hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.section2__column {
+  position: relative;
+}
+
+.section2__top .row__container.hover .section2__icon {
+  border-color: #fff;
+}
+
+.section2__top .row__container.hover .button {
+  margin-top: 50px;
+  max-width: 200px;
+  border: 1px solid #c08329;
 }
 
 .section2__icon {
@@ -332,6 +362,12 @@ nav .nav__button span {
   font-size: 30px;
   color: #213c61;
   margin-bottom: 30px;
+}
+
+/* on hover  */
+.section2__top .row__container.hover h3,
+.section2__top .row__container.hover p {
+  color: #fff;
 }
 
 .section2 hr {
@@ -358,6 +394,29 @@ nav .nav__button span {
 .section2__bottom .bottom__left img {
   padding-right: 50px;
   object-fit: contain;
+  position: relative;
+}
+
+.section2__bottom .bottom__left::before {
+  content: "";
+  background-color: #f8f1e6;
+  height: 500px;
+  width: 500px;
+  z-index: -1;
+  top: 100px;
+  left: 50px;
+  position: absolute;
+}
+
+.section2__bottom .bottom__left::after {
+  content: "";
+  background-color: #f8f1e6;
+  height: 500px;
+  width: 500px;
+  z-index: -1;
+  top: -50px;
+  right: 0;
+  position: absolute;
 }
 
 .section2__bottom .bottom__right {
@@ -897,7 +956,7 @@ textarea {
 
 .section9 {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-  url("section9/footer-bg.jpg") no-repeat center center / cover;
+    url("section9/footer-bg.jpg") no-repeat center center / cover;
   padding-bottom: 30px;
 }
 
@@ -977,21 +1036,22 @@ textarea {
   font-weight: 500;
 }
 
-.section9__left ul li, .section9__right ul li {
+.section9__left ul li,
+.section9__right ul li {
   color: #fff;
   line-height: 1;
   margin: 20px;
   font-family: "Heebo", sans-serif;
   font-size: 16px;
   cursor: pointer;
-
 }
 
 .section9__right {
   margin-left: 50px;
 }
 
-.section9__left ul li span, .section9__right ul li span {
+.section9__left ul li span,
+.section9__right ul li span {
   margin-right: 20px;
 }
 
